@@ -5,6 +5,7 @@
 * Generating Partitions
 * q-Series and Other Utilities
 * Compilation and Benchmark
+* TODO
 
 
 ## Generating Partitions
@@ -18,6 +19,7 @@ ascending or descending composition.
 * `partition.h`   Header file for C
 * `partition.c`   Partition programs in C
 * `partitions.py` Partition programs in Python
+* `partition-examples.ipynb`  Python example as a jupyter notebook.
 
 
 ### Algorithms:
@@ -87,3 +89,10 @@ is the fastest algorithm for generating ascending compositions.
 But with `-O3` optimization turned on, it seems that Merca1 is
 the fastest.  For generating descending composition, it seems that
 ZS1 is the fastest.
+
+
+## TODO
+
+Try wrapping around the C program library as a python library.  The
+pure python implementation (`partition.py`) is very slow. I may also
+try other methods of optimizations.
