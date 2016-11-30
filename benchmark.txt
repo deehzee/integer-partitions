@@ -1,0 +1,87 @@
+# 2016-07-09 (n = 100) [compiled with gcc, -O3] on cmioffice
+rule_asc        R: 0m0.601s     U: 0m0.591s
+rule_desc       R: 0m1.925s     U: 0m1.916s
+accel_asc       R: 0m0.276s     U: 0m0.269s
+accel_desc      R: 0m0.392s     U: 0m0.381s
+merca1          R: 0m0.264s     U: 0m0.258s*
+merca2          R: 0m0.273s     U: 0m0.265s
+merca3          R: 0m0.302s     U: 0m0.293s
+zs1             R: 0m0.390s     U: 0m0.379s
+zs2             R: 0m1.422s     U: 0m1.408s
+
+# 2016-07-09 (n = 100) [compiled with clang-3.6, -O3] on cmioffice
+rule_asc        R: 0m0.534s     U: 0m0.539s
+rule_desc       R: 0m1.941s     U: 0m1.931s
+accel_asc       R: 0m0.297s     U: 0m0.291s
+accel_desc      R: 0m0.663s     U: 0m0.655s
+merca1          R: 0m0.286s     U: 0m0.284s
+merca2          R: 0m0.375s     U: 0m0.364s
+merca3          R: 0m0.312s     U: 0m0.302s
+zs1             R: 0m0.386s     U: 0m0.380s
+zs2             R: 0m1.432s     U: 0m1.416s
+
+# 2016-07-09 (n = 100) [compiled with gcc, -O2] on cmioffice
+rule_asc        R: 0m0.598s     U: 0m0.590s
+rule_desc       R: 0m1.926s     U: 0m1.911s
+accel_asc       R: 0m0.391s     U: 0m0.385s
+accel_desc      R: 0m0.396s     U: 0m0.387s
+merca1          R: 0m0.418s     U: 0m0.411s
+merca2          R: 0m0.391s     U: 0m0.380s
+merca3          R: 0m0.384s     U: 0m0.371s
+zs1             R: 0m0.386s     U: 0m0.377s
+zs2             R: 0m2.688s     U: 0m2.671s
+
+# 2016-07-09 (n = 100) [compiled with clang-3.6, -O2] on cmioffice
+rule_asc        R: 0m0.570s     U: 0m0.565s
+rule_desc       R: 0m1.844s     U: 0m1.832s
+accel_asc       R: 0m0.372s     U: 0m0.364s
+accel_desc      R: 0m0.625s     U: 0m0.619s
+merca1          R: 0m0.362s     U: 0m0.351s
+merca2          R: 0m0.371s     U: 0m0.366s
+merca3          R: 0m0.307s     U: 0m0.299s
+zs1             R: 0m0.384s     U: 0m0.379s
+zs2             R: 0m1.462s     U: 0m1.452s
+
+# 2016-07-09 Only comparing the relevant algorthims for n = 120
+
+-----------------------------------------------------------
+n       Compiler    Optimization    Algorithm   Time (User)
+===========================================================
+120     gcc                         accel_asc   0m 07.555s
+120     gcc                         merca1      0m 12.310s
+120     gcc                         merca2      0m 07.460s
+120     gcc                         merca3      0m 06.275s*
+120     gcc                         zs1         0m 08.376s
+-----------------------------------------------------------
+120     gcc         -O2             accel_asc   0m 03.529s
+120     gcc         -O2             merca1      0m 03.958s
+120     gcc         -O2             merca2      0m 03.705s
+120     gcc         -O2             merca3      0m 03.470s*
+120     gcc         -O2             zs1         0m 03.645s
+-----------------------------------------------------------
+120     gcc         -O3             accel_asc   0m 02.598s
+120     gcc         -O3             merca1      0m 02.538s*+*
+120     gcc         -O3             merca2      0m 02.553s
+120     gcc         -O3             merca3      0m 02.645s
+120     gcc         -O3             zs1         0m 03.629s
+-----------------------------------------------------------
+n       Compiler    Optimization    Algorithm   Time (User)
+===========================================================
+120     clang                       accel_asc   0m 07.642s
+120     clang                       merca1      0m 12.250s
+120     clang                       merca2      0m 07.607s
+120     clang                       merca3      0m 06.194s*
+120     clang                       zs1         0m 08.318s
+-----------------------------------------------------------
+120     clang       -O2             accel_asc   0m 03.490s
+120     clang       -O2             merca1      0m 03.313s
+120     clang       -O2             merca2      0m 03.501s
+120     clang       -O2             merca3      0m 02.820s*
+120     clang       -O2             zs1         0m 03.533s
+-----------------------------------------------------------
+120     clang       -O3             accel_asc   0m 02.750s
+120     clang       -O3             merca1      0m 02.622s*+
+120     clang       -O3             merca2      0m 03.475s
+120     clang       -O3             merca3      0m 02.842s
+120     clang       -O3             zs1         0m 03.527s
+-----------------------------------------------------------
