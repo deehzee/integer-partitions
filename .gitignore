@@ -1,0 +1,8 @@
+expt/
+genpartn
+partnid
+*.o
+*.pyc
+.ipynb_checkpoints/
+.*.swp
+*~
