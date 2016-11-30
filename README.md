@@ -18,7 +18,7 @@ ascending or descending composition.
 
 * `partition.h`   Header file for C
 * `partition.c`   Partition programs in C
-* `partitions.py` Partition programs in Python
+* `partition.py` Partition programs in Python
 * `partition-examples.ipynb`  Python example as a jupyter notebook.
 
 
